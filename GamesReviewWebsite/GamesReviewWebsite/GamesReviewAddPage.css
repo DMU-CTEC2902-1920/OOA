@@ -1,0 +1,72 @@
+﻿body {
+    height: 1920px;
+}
+
+.MainDiv {
+    position: absolute;
+    top: 38px;
+    left: 100px;
+    width: 1368px;
+    height: 639px;
+}
+
+#MainForm {
+    height: 1920px;
+}
+
+#GameNameLBL {
+    position: absolute;
+    top: 119px;
+    left: 5px;
+}
+
+#GameNameTXT {
+    position: absolute;
+    top: 142px;
+    left: 4px;
+}
+
+#GameScoreLBL {
+    position: absolute;
+    top: 250px;
+    left: 7px;
+}
+
+#GameScoreDDL {
+    position: absolute;
+    top: 272px;
+    bottom: 345px;
+}
+
+#GameGenreLBL {
+    position: absolute;
+    top: 181px;
+    left: 8px;
+}
+
+
+#GameGenreDDL {
+    position: absolute;
+    top: 202px;
+    left: 4px;
+}
+
+#GameReviewLBL {
+    position: absolute;
+    top: 86px;
+    left: 162px;
+}
+
+#GameReviewTA {
+    position: absolute;
+    height: 340px;
+    width: 552px;
+    top: 114px;
+    left: 158px;
+}
+
+#GameReviewAddPageLBL{
+    position:absolute;
+    top: 45px;
+    left: 322px;
+}
