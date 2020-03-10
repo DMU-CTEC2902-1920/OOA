@@ -1,0 +1,83 @@
+﻿@model IEnumerable<GamesReviewWebsite.Models.GamesCollection>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GameID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameDeveloper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameAgeRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GameDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Games)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameDeveloper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameAgeRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Games)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
