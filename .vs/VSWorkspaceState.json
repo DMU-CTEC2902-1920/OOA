@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GamesReviewWebsite"
+    "\\GamesReviewWebsite",
+    "\\GamesReviewWebsite\\Models"
   ],
-  "SelectedNode": "\\GamesReviewWebsite\\GamesReviewWebsite.sln",
+  "SelectedNode": "\\GamesReviewWebsite\\Controllers",
   "PreviewInSolutionExplorer": false
 }

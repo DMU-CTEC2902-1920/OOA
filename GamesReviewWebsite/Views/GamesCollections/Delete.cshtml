@@ -12,7 +12,24 @@
     <title>Delete</title>
 </head>
 <body>
-    <h3>Are you sure you want to delete this?</h3>
+    <h2>Delete Game</h2>
+    <div class="card">
+        <div class="card-header">
+            <h3>How to delete a Game Review <span class="caret"></span></h3>
+        </div>
+        <div id="DeleteReview" class=" collapse">
+            <div class=”card-body”>
+                <p><strong>To delete a games review select the game review </strong></p>
+                <p><strong>that you wish to delete, then press the delete </strong></p>
+                <p><strong>button to confirm the removal of that Games Review.</strong></p>
+            </div>
+        </div>
+    </div>
+    <h3 class="card-title">
+        <a data-toggle="collapse" href="#DeleteReview">
+            How to Delete a Games Review:
+        </a>
+    </h3>
     <div>
         <h4>GamesCollection</h4>
         <hr />
@@ -20,72 +37,77 @@
             <dt>
                 @Html.DisplayNameFor(model => model.GameID)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameID)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameDeveloper)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameDeveloper)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameGenre)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameGenre)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameScore)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameScore)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameAgeRating)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameAgeRating)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameName)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameName)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameDescription)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameDescription)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Games)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Games)
             </dd>
-    
+
         </dl>
-    
-        @using (Html.BeginForm()) {
+
+        <p class="alert-info">
+            <strong>Are you sure you want to delete this Game?</strong>
+        </p>
+
+        @using (Html.BeginForm())
+        {
             @Html.AntiForgeryToken()
-    
+
             <div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-default" /> |
                 @Html.ActionLink("Back to List", "Index")

@@ -12,10 +12,29 @@
     <title>Create</title>
 </head>
 <body>
-    @using (Html.BeginForm()) 
+    <div class="card">
+        <div class="card-header">
+            <h3>How to create a Game Review <span class="caret"></span></h3>
+        </div>
+        <div id="CreateReview" class=" collapse">
+            <div class=”card-body”>
+                <p><strong>To start creating a games review, simply enter </strong></p>
+                <p><strong>the details for the game you're writing the review</strong></p>
+                <p><strong>for, then once all fields are filled in press submit </strong></p>
+                <p><strong>to confirm the creation of your new Game Review. </strong></p>
+
+            </div>
+        </div>
+    </div>
+    <h3 class="card-title">
+        <a data-toggle="collapse" href="#CreateReview">
+            How to Create a Games Review:
+        </a>
+    </h3>
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-        
+
         <div class="form-horizontal">
             <h4>GamesCollection</h4>
             <hr />
@@ -27,7 +46,7 @@
                     @Html.ValidationMessageFor(model => model.GameID, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.GameDeveloper, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -35,7 +54,7 @@
                     @Html.ValidationMessageFor(model => model.GameDeveloper, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.GameGenre, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -43,7 +62,7 @@
                     @Html.ValidationMessageFor(model => model.GameGenre, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.GameScore, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -51,7 +70,7 @@
                     @Html.ValidationMessageFor(model => model.GameScore, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.GameAgeRating, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -59,7 +78,7 @@
                     @Html.ValidationMessageFor(model => model.GameAgeRating, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.GameName, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -67,7 +86,7 @@
                     @Html.ValidationMessageFor(model => model.GameName, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.GameDescription, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -75,7 +94,7 @@
                     @Html.ValidationMessageFor(model => model.GameDescription, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Games, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -83,7 +102,7 @@
                     @Html.ValidationMessageFor(model => model.Games, "", new { @class = "text-danger" })
                 </div>
             </div>
-    
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Create" class="btn btn-default" />
@@ -91,7 +110,7 @@
             </div>
         </div>
     }
-    
+
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>

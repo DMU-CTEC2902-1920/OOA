@@ -12,6 +12,27 @@
     <title>Index</title>
 </head>
 <body>
+    <div class="card">
+        <div class="card-header">
+            <h3>About Us: <span class="caret"></span></h3>
+        </div>
+        <div id="PageInfo" class=" collapse">
+            <div class=”card-body”>
+                <p><strong>Hello, and welcome to our Games Review Website.</strong></p>
+                <p><strong>This page is meant to show you all the latest</strong></p>
+                <p><strong>reviews from the best games currently available. </strong></p>
+                <p><strong>As the user you have the freedom to add, edit</strong></p>
+                <p><strong>and delete games reviews on the page as you please,</strong></p>
+                <p><strong>so feel free to explore our page and make the most</strong></p>
+                <p><strong>of the website we've made!.</strong></p>
+            </div>
+        </div>
+    </div>
+    <h3 class="card-title">
+        <a data-toggle="collapse" href="#PageInfo">
+            About Us:
+        </a>
+    </h3>
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
@@ -43,41 +64,42 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameDeveloper)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameGenre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameScore)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameAgeRating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Games)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameDeveloper)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameGenre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameAgeRating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Games)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
     </table>
 </body>
 </html>

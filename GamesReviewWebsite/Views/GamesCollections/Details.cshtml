@@ -12,6 +12,26 @@
     <title>Details</title>
 </head>
 <body>
+    <h2>Game Details</h2>
+    <div class="card">
+        <div class="card-header">
+            <h3>Game Review Details <span class="caret"></span></h3>
+        </div>
+        <div id="ReviewDetails" class=" collapse">
+            <div class=”card-body”>
+                <p><strong>This page shows you all the Games Reviews so far.</strong></p>
+                <p><strong>Our Game Reviews contain details about the Game Name,.</strong></p>
+                <p><strong>Game Developer, the description, genre, and age of.</strong></p>
+                <p><strong>the Game and the GameScore for the Game (the rating </strong></p>
+                <p><strong> that our Reviews Team gave the Game).</strong></p>
+            </div>
+        </div>
+    </div>
+    <h3 class="card-title">
+        <a data-toggle="collapse" href="#ReviewDetails">
+            Games Review Details:
+        </a>
+    </h3>
     <div>
         <h4>GamesCollection</h4>
         <hr />
@@ -19,67 +39,67 @@
             <dt>
                 @Html.DisplayNameFor(model => model.GameID)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameID)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameDeveloper)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameDeveloper)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameGenre)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameGenre)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameScore)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameScore)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameAgeRating)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameAgeRating)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameName)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameName)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.GameDescription)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.GameDescription)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Games)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Games)
             </dd>
-    
+
         </dl>
     </div>
     <p>
