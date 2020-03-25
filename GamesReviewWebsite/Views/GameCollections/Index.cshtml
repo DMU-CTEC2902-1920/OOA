@@ -1,0 +1,20 @@
+﻿@model List<GamesReviewWebsite.Models.GamesCollection>
+@{
+    ViewBag.Title = "Index";
+}
+
+<body>
+    <h2>All Games</h2>
+    <ul> 
+        @foreach (var gamesCollection in @Model)
+        {
+            <li><a href="~/GameCollections/Details/@gamesCollection.GameID">@gamesCollection.GameName</a></li>
+            if (gamesCollection.GameScore > 5)
+            {
+                <text> Highly Rated Game!</text>
+            }
+        }
+
+        </ul>
+</body>
+
