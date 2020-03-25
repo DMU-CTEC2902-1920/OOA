@@ -129,6 +129,7 @@
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\GamesCollection.cs" />
     <Compile Include="Models\GamesCollectionContext.cs" />
+    <Compile Include="Models\GamesReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

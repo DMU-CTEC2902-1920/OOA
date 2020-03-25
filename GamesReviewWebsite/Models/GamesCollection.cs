@@ -19,4 +19,6 @@ namespace GamesReviewWebsite.Models
         public virtual string GameDescription { get; set; }
         public virtual Games Games { get; set; }
     }
+
+   
 }

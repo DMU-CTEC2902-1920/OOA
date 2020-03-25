@@ -8,10 +8,20 @@ using System.Web;
 using System.Web.Mvc;
 using GamesReviewWebsite.Models;
 
+
+
 namespace GamesReviewWebsite.Controllers
 {
+
+    
     public class GamesCollectionsController : Controller
     {
+        private GamesReview game;
+        public GamesCollectionsController() { }
+        public GamesCollectionsController(GamesReview model)
+        {
+            game = model;
+        }
         private GamesCollectionContext db = new GamesCollectionContext();
 
         // GET: GamesCollections
@@ -122,6 +132,31 @@ namespace GamesReviewWebsite.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public string Games(int Id, int GameID)
+        {
+            return String.Format("Id = {0}, Game ID = {1}", Id, GameID);
+        }
+
+        public ViewResult Games()
+        {
+            if (game == null)
+            {
+                game = new GamesReview();
+                game.GameName = "Call Of Duty";
+                game.GameDescription = "War shooter that focuses on killing the enemy side";
+                game.GameAgeRating = 18;
+            }
+            if (game.GameAgeRating > 18)
+            {
+                ViewBag.SubTitle = "This game is suitable for those under 18 to play ";
+            }
+            else
+            {
+                ViewBag.SubTitle = "Only those aged 18 and over may play this game ";
+            }
+            return View(game);
         }
     }
 }
