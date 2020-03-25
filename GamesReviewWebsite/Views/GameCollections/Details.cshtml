@@ -1,0 +1,25 @@
+﻿@model GamesReviewWebsite.Models.UserGameViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/GameCollections/_UserGameLayout.cshtml";
+}
+@section User {
+<h2>User info:</h2>
+<p><strong>First Name:</strong> @Model.User.FirstName</p>
+<p><strong>First Name:</strong> @Model.User.LastName</p>
+}
+
+@section GamesCollection {
+<h2>@Model.GamesCollection.GameName</h2>
+<h2><strong>Games Developer</strong></h2>
+<p>@Model.GamesCollection.GameDeveloper</p>
+<h2><strong>Games Description</strong></h2>
+<p>@Model.GamesCollection.GameDescription</p>
+<h2><strong>Games Age Rating</strong></h2>
+<p><strong>@Model.GamesCollection.GameAgeRating</strong></p>
+<h2><strong>Games Genre</strong></h2>
+<p>@Model.GamesCollection.GameGenre</p>
+<h2><strong>Games Score</strong></h2>
+<p>@Model.GamesCollection.GameScore</p>
+}

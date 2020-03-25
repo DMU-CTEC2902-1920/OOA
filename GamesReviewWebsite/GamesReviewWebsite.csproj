@@ -121,6 +121,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GameCollectionsController.cs" />
     <Compile Include="Controllers\GamesCollectionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -129,7 +130,8 @@
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\GamesCollection.cs" />
     <Compile Include="Models\GamesCollectionContext.cs" />
-    <Compile Include="Models\GamesReview.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserGameViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +278,10 @@
     <Content Include="Views\GamesCollections\Details.cshtml" />
     <Content Include="Views\GamesCollections\Edit.cshtml" />
     <Content Include="Views\GamesCollections\Index.cshtml" />
+    <Content Include="Views\GameCollections\Details.cshtml" />
+    <Content Include="Views\GameCollections\Index.cshtml" />
+    <Content Include="Views\GameCollections\Edit.cshtml" />
+    <Content Include="Views\GameCollections\_UserGameLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\GamesReviewWebsite",
+    "\\GamesReviewWebsite\\Controllers",
     "\\GamesReviewWebsite\\Models"
   ],
-  "SelectedNode": "\\GamesReviewWebsite\\Controllers",
+  "SelectedNode": "\\GamesReviewWebsite.sln",
   "PreviewInSolutionExplorer": false
 }
