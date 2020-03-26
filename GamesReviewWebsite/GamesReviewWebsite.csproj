@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GameCollectionsController.cs" />
     <Compile Include="Controllers\GamesCollectionsController.cs" />
+    <Compile Include="Controllers\GamesListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -273,15 +274,16 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\GamesCollections\Create.cshtml" />
-    <Content Include="Views\GamesCollections\Delete.cshtml" />
-    <Content Include="Views\GamesCollections\Details.cshtml" />
-    <Content Include="Views\GamesCollections\Edit.cshtml" />
-    <Content Include="Views\GamesCollections\Index.cshtml" />
     <Content Include="Views\GameCollections\Details.cshtml" />
     <Content Include="Views\GameCollections\Index.cshtml" />
     <Content Include="Views\GameCollections\Edit.cshtml" />
     <Content Include="Views\GameCollections\_UserGameLayout.cshtml" />
+    <Content Include="Views\GamesList\Create.cshtml" />
+    <Content Include="Views\GamesList\Delete.cshtml" />
+    <Content Include="Views\GamesList\Details.cshtml" />
+    <Content Include="Views\GamesList\Edit.cshtml" />
+    <Content Include="Views\GamesList\Index.cshtml" />
+    <Content Include="Views\GamesList\_GamesListLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

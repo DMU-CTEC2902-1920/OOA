@@ -5,7 +5,7 @@
 
 <body>
     <h2>All Games</h2>
-    <ul> 
+    <ul>
         @foreach (var gamesCollection in @Model)
         {
             <li><a href="~/GameCollections/Details/@gamesCollection.GameID">@gamesCollection.GameName</a></li>
@@ -15,6 +15,6 @@
             }
         }
 
-        </ul>
+    </ul>
 </body>
 
