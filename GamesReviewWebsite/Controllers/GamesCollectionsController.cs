@@ -16,9 +16,9 @@ namespace GamesReviewWebsite.Controllers
     
     public class GamesCollectionsController : Controller
     {
-        private GamesReview game;
+        private GameReview game;
         public GamesCollectionsController() { }
-        public GamesCollectionsController(GamesReview model)
+        public GamesCollectionsController(GameReview model)
         {
             game = model;
         }
@@ -143,7 +143,7 @@ namespace GamesReviewWebsite.Controllers
         {
             if (game == null)
             {
-                game = new GamesReview();
+                game = new GameReview();
                 game.GameName = "Call Of Duty";
                 game.GameDescription = "War shooter that focuses on killing the enemy side";
                 game.GameAgeRating = 18;

@@ -31,7 +31,7 @@ namespace GamesReviewWebsite.Tests.Controllers
         {
             GamesCollectionsController controller = new GamesCollectionsController();
             ViewResult viewResult = controller.Games();
-            GamesReview result = viewResult.Model as GamesReview;
+            GameReview result = viewResult.Model as GameReview;
             Assert.AreEqual("Call of Duty", result.GameName);
         }
 
@@ -50,7 +50,7 @@ namespace GamesReviewWebsite.Tests.Controllers
         public void GameAgeRatingIsUnder18()
         {
 
-            GamesReview model = new GamesReview();
+            GameReview model = new GameReview();
             model.GameName = "Test Game 1";
             model.GameDescription = "Description of Test Game 1";
             model.GameAgeRating = 12;

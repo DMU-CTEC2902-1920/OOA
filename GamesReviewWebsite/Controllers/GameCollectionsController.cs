@@ -10,6 +10,13 @@ namespace GamesReviewWebsite.Controllers
 {
     public class GameCollectionsController : Controller
     {
+        private GameReview game;
+        public GameCollectionsController() { }
+        public GameCollectionsController(GameReview model)
+        {
+            game = model;
+        }
+
         private List<GamesCollection> _gamesCollection = new List<GamesCollection>()
         {
             new GamesCollection{ GameID = 1,
@@ -94,6 +101,31 @@ namespace GamesReviewWebsite.Controllers
             {
                 return View(gamesCollection);
             }
-        }
+        }
+
+        public string Games(int Id, int GameID)
+        {
+            return String.Format("Id = {0}, Game ID = {1}", Id, GameID);
+        }
+
+        public ViewResult Games()
+        {
+            if (game == null)
+            {
+                game = new GameReview();
+                game.GameName = "Call Of Duty";
+                game.GameDescription = "War shooter that focuses on killing the enemy side";
+                game.GameAgeRating = 18;
+            }
+            if (game.GameAgeRating > 18)
+            {
+                ViewBag.SubTitle = "This game is suitable for those under 18 to play ";
+            }
+            else
+            {
+                ViewBag.SubTitle = "Only those aged 18 and over may play this game ";
+            }
+            return View(game);
+        }
     }
 }
